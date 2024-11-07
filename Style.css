@@ -2,6 +2,7 @@
     --maincolor:#089DA1;
     --secondarycolor:#919191;
     --Bodycolor:hsl(0, 0%, 100%);
+    --Footercolor:#EAEAEA;
 }
 
 body{
@@ -208,23 +209,131 @@ body{
 }
 
 /*Footer Css*/
+footer{
+    background-color: var(--Footercolor);
+    margin-top: 30px;
+    padding: 0 50px;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 2.2fr 0.2fr;
+    column-gap: 5em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "footer-logo footer-links footer-contact footer-follow footer-newsletter"
+      "footer-logocontext footer-linkscontext footer-contactcontext footer-icons footer-subscribe"
+      "footer-copyright footer-copyright footer-copyright footer-copyright footer-copyright";
+}
+  
+.footer-logo {
+    grid-area: footer-logo;
+    align-self: flex-end;
+    width: 35%;
+}
 
+.footer-logo img{
+    width: 100%;
+}
+.footer-links { grid-area: footer-links; }
+  
+.footer-contact { grid-area: footer-contact; }
+  
+.footer-follow { grid-area: footer-follow; }
+  
+.footer-newsletter { grid-area: footer-newsletter; }
+  
+.footer-logocontext { grid-area: footer-logocontext; }
+
+  
+.footer-linkscontext li{
+    grid-area: footer-linkscontext;
+    list-style-type: none;
+    padding: 5px;
+}
+  
+.footer-contactcontext li{
+    grid-area: footer-contactcontext;
+    list-style-type: none;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+.footer-contactcontext ul, .footer-linkscontext ul{
+    padding: 0;
+}
+  
+.footer-icons i{
+    grid-area: footer-icons;
+    padding-right: 3px;
+}
+  
+.footer-subscribe {
+    grid-area: footer-subscribe;
+}
+
+.footer-subscribe input{
+    display: block;
+    width: 70%;
+    padding: 0.5em 1em;
+    margin-bottom: 5px;
+    background-color: #CACACA;
+    border: none;
+    border-radius: 20px
+}
+
+.footer-subscribe button{
+    padding: 0.5em 1em;
+    background-color: var(--maincolor);
+    color: white;
+    border: none;
+    border-radius: 20px
+}
+  
+.footer-copyright {
+    grid-area: footer-copyright;
+    text-align: center;
+}
+
+#Designers, .footer-copyright i{
+    color: var(--maincolor);
+}
+
+.footer-logo h2, .footer-links h2, .footer-contact h2, .footer-follow h2, .footer-newsletter h2{
+    margin: 0;
+}
+
+.footer-logo, .footer-links, .footer-contact, .footer-follow, .footer-newsletter{
+    align-self:flex-end;
+}
+
+.footer-logocontext, .footer-linkscontext, .footer-contactcontext, .footer-icons, .footer-subscribe, .footer-copyright{
+    align-self: baseline;
+}
+  
+
+/*Media Queries*/
 @media (max-width: 1024px) {
+
+    /*Arrivals media*/
     .Arrivals-card {
         flex: 1 1 calc(50% - 3em);
         max-width: calc(50% - 3em);
     }
 
+    /*Reviews media*/
     .Review-cards {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
+    /*Digital media*/
     .digital-btn{
         font-size: 1vw;
     }
 
+    /*Our Blog media*/
     .OurBlog-container{
         row-gap: 2em;
     }
@@ -233,9 +342,20 @@ body{
         width:40%;
     }
 
+    /*Footer media*/
+    .footer-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+          "footer-logo footer-links footer-contact"
+          "footer-logocontext footer-linkscontext footer-contactcontext"
+          "footer-follow footer-newsletter footer-newsletter"
+          "footer-subscribe footer-icons footer-icons"
+          "footer-copyright footer-copyright footer-copyright";
+    }
+
 }
 
-@media (max-width: 415px) {
+@media (max-width: 426px) {
     
     /*Arrivals media*/
     .Arrivals-card {
@@ -271,4 +391,36 @@ body{
     .OurBlog-card{
         width:90%;
     }
+
+    /*Footer media*/
+    .footer-container {
+        justify-items: center;
+        row-gap: 0.5em;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "footer-logo"
+            "footer-logocontext"
+            "footer-links"
+            "footer-linkscontext"
+            "footer-contact"
+            "footer-contactcontext"
+            "footer-follow"
+            "footer-icons"
+            "footer-newsletter"
+            "footer-subscribe"
+            "footer-copyright";
+    }
+
+    .footer-logo img{
+        margin-top:20px
+    }
+
+    .footer-logocontext, .footer-contactcontext, .footer-linkscontext{
+        text-align: center;
+    }
+
+    .footer-linkscontext li{
+        display: inline-block;
+    }
+    
 }
