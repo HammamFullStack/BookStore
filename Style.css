@@ -76,7 +76,6 @@ body{
 }
 
 /*Reviews Css*/
-
 .Review-title{
     text-align: center;
 }
@@ -127,15 +126,13 @@ body{
 }
 
 /*Digital Css*/
-
 .digital-image {
     background-image: url('image/image/banner.jpg'); 
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 0;
-    padding-top: 35%;
+    padding-top: 30%;
     position: relative;
   }
 
@@ -160,6 +157,55 @@ body{
 }
 
 /*Our Blog Css*/
+.OurBlog-title{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.OurBlog-title h1{
+    margin-top:0;
+    font-weight: bold;
+}
+
+.OurBlog-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.OurBlog-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width:26%;
+}
+
+.OurBlog-image img{
+    width: 100%;
+    height: 16em;
+    object-fit: cover;
+}
+
+.OurBlog-context,.OurBlog-icons{
+    padding: 0 1em;
+    text-align: justify;
+}
+
+.OurBlog-context p{
+    margin-bottom: 5px;
+}
+
+.OurBlog-context p:first-of-type{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--maincolor);
+    margin: 0.5em auto ;
+}
+
+.OurBlog-icons{
+    display: flex;
+    justify-content: space-between;
+    color: var(--maincolor);
+    margin-bottom: 20px;
+}
 
 /*Footer Css*/
 
@@ -179,20 +225,32 @@ body{
         font-size: 1vw;
     }
 
+    .OurBlog-container{
+        row-gap: 2em;
+    }
+
+    .OurBlog-card{
+        width:40%;
+    }
+
 }
 
 @media (max-width: 415px) {
+    
+    /*Arrivals media*/
     .Arrivals-card {
         flex: 1 1 100%;
         max-width: 100%;
     }
 
+    /*Reviews media*/
     .Review-cards {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
+    /*Digital media*/
     .digital-title{
         text-align: center;
         display: block;
@@ -202,10 +260,15 @@ body{
         display: inline;
         position: static;
         font-size: 1em;
+        margin-bottom: 20px;
     }
 
     .digital-image {
         display: none;
     }
 
+    /*Our Blog media*/
+    .OurBlog-card{
+        width:90%;
+    }
 }
