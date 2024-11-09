@@ -1,12 +1,28 @@
-:root{
-    --maincolor:#089DA1;
-    --secondarycolor:#919191;
-    --textColor:black;
-    --Bodycolor:hsl(0, 0%, 100%);
-    --Footercolor:#EAEAEA;
+:root {
+    --maincolor: #089DA1;
+    --secondarycolor: #919191;
+    --textColor: black;
+    --Bodycolor: hsl(0, 0%, 100%);
+    --Footercolor: #EAEAEA;
 }
 
-body{
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; 
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondarycolor);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--maincolor);
+    border-radius: 8px; 
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: var(--Bodycolor);
     margin-top: 70px;
@@ -748,3 +764,15 @@ footer{
     
 }
 
+@media (prefers-color-scheme: dark) {
+    body, nav,.nav-links ul li a, footer{
+        --background-color: #121212;
+        --text-color: #ffffff;
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+
+    footer{
+        background-color:#1c1c1c;
+    }
+}
