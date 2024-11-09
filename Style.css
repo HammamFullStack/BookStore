@@ -126,6 +126,38 @@ nav{
 }
 
 /*About us Css*/
+.Aboutus{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3vw;
+}
+
+.aboutus-img{
+    width: 40%;
+}
+
+.aboutus-img img{
+    width: 100%;
+}
+
+.aboutus-context{
+    width: 40%;
+    text-align: justify;
+}
+
+.aboutus-context h1{
+    font-size: 2em;
+}
+
+.aboutus-context button{
+    padding: 0.4em 1em;
+    background-color: var(--maincolor);
+    color: white;
+    border: none;
+    margin-top: 3vh;
+    font-size: 1vw;
+}
 
 /*Featured Books Css*/
 
@@ -560,6 +592,26 @@ footer{
 
     .services-card{
         width: 90%;
+    }
+
+    /*About us media*/
+    
+    .aboutus-img{
+        display: none;
+    }
+    
+    .aboutus-context{
+        width: 90%;
+        text-align: justify;
+        text-align: center;
+    }
+    
+    .aboutus-context h1{
+        font-size: 2em;
+    }
+    
+    .aboutus-context button{
+        font-size: 1em;
     }
     
     /*Arrivals media*/
