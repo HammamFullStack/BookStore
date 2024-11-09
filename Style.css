@@ -131,6 +131,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     margin-top: 3vw;
+    margin-bottom: 3vw;
 }
 
 .aboutus-img{
@@ -160,10 +161,72 @@ nav{
 }
 
 /*Featured Books Css*/
+.Featured{
+    margin-bottom: 8vw;
+}
+
+.Featured-title h1{
+    text-align: center;
+    font-size: 2em;
+}
+
+.Featured-books{
+    display:flex;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+    column-gap: 2em;
+    overflow: auto;
+}
+
+.Featured-card{
+    border: 1px solid var(--secondarycolor);
+    min-width: 200px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 5px;
+
+}
+
+.Featured-card img{
+    width: 80%;
+    height: 32vh;
+}
+
+.Featured-card p{
+    margin: 8px 0;
+}
+
+.Featured-name{
+    color: var(--secondarycolor);
+}
+
+.Featured-catagories{
+    color: var(--maincolor);
+}
+
+.Featured-card span{
+    font-weight: bold;
+}
+
+.Featured-btn{
+    padding: 0.3em 0.8em;
+    border-radius: 0;
+    border: 2px solid var(--maincolor); 
+    background-color: var(--Bodycolor);
+}
+
+.Featured-card:hover{
+    box-shadow: 0 2px 4px rgba(8, 157, 161, 0.3), 0 3px 6px rgba(8, 157, 161, 0.2);
+}
 
 /*New Arrivals Css*/
+.Arrivals{
+    margin-bottom: 8vw;
+}
+
 .Arrivals-title h1{
     text-align: center;
+    font-size: 2em;
 }
 
 .Arrivals-books{
@@ -206,6 +269,7 @@ nav{
     padding: 0.3em 0.8em;
     border-radius: 0;
     border: 2px solid var(--maincolor);
+    background-color: var(--Bodycolor);
 }
 
 .Arrivals-card:hover{
