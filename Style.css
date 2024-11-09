@@ -57,13 +57,8 @@ nav{
     font-size: 0.9em;
 }
 
-.nav-toggle-checkbox {
+.nav-collapse{
     display: none;
-}
-
-.nav-toggle-label {
-    display: none;
-    cursor: pointer;
 }
 
 
@@ -113,6 +108,22 @@ nav{
 
 
 /*Services Css*/
+.services{
+    display: flex;
+    justify-content: space-around;
+}
+
+.services-card{
+    text-align: center;
+    width: 20%;
+    box-shadow: 0 0 8px rgba(8, 157, 161, 0.5), 0 0 8px rgba(8, 157, 161, 0.2);
+    padding: 1em;
+}
+
+.services-card i{
+    font-size: 2.5em;
+    color: var(--maincolor);
+}
 
 /*About us Css*/
 
@@ -440,6 +451,18 @@ footer{
         font-size: 1.5vw;
     }
 
+    /*Services media*/
+    .services{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 2rem;
+    }
+
+    .services-card{
+        width: 90%;
+    }
+
     /*Arrivals media*/
     .Arrivals-card {
         flex: 1 1 calc(50% - 3em);
@@ -494,14 +517,9 @@ footer{
 
     .nav-links{
         display: none;
-        width: 100%;
     }
 
-    .nav-toggle-checkbox:checked + .nav-toggle-label + .nav-links{
-        display: flex;
-    }
-
-    .nav-toggle-label {
+    .nav-collapse{
         display: block;
     }
 
@@ -530,6 +548,18 @@ footer{
 
     .welcome-btn{
         font-size: 3vw;
+    }
+
+    /*Services media*/
+    .services{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2rem;
+    }
+
+    .services-card{
+        width: 90%;
     }
     
     /*Arrivals media*/
