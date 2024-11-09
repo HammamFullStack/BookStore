@@ -593,6 +593,26 @@ footer{
     .services-card{
         width: 90%;
     }
+
+    /*About us media*/
+    
+    .aboutus-img{
+        display: none;
+    }
+    
+    .aboutus-context{
+        width: 90%;
+        text-align: justify;
+        text-align: center;
+    }
+    
+    .aboutus-context h1{
+        font-size: 2em;
+    }
+    
+    .aboutus-context button{
+        font-size: 1em;
+    }
     
     /*Arrivals media*/
     .Arrivals-card {
