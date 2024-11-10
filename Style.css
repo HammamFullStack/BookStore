@@ -25,6 +25,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: var(--Bodycolor);
+    color: var(--textColor);
     margin-top: 70px;
 }
 
@@ -125,7 +126,6 @@ nav{
     margin-top: 3vh;
     font-size: 1vw;
 }
-
 
 /*Services Css*/
 .services{
@@ -228,6 +228,7 @@ nav{
     border-radius: 0;
     border: 2px solid var(--maincolor); 
     background-color: var(--Bodycolor);
+    color: var(--textColor);
 }
 
 .Featured-card:hover{
@@ -284,6 +285,7 @@ nav{
     border-radius: 0;
     border: 2px solid var(--maincolor);
     background-color: var(--Bodycolor);
+    color: var(--textColor);
 }
 
 .Arrivals-card:hover{
@@ -766,10 +768,10 @@ footer{
 
 @media (prefers-color-scheme: dark) {
     body, nav,.nav-links ul li a, footer{
-        --background-color: #121212;
-        --text-color: #ffffff;
-        background-color: var(--background-color);
-        color: var(--text-color);
+        --textColor: #ffffff;
+        --Bodycolor: #121212;
+        background-color: var(--Bodycolor);
+        color: var(--textColor);
     }
 
     footer{
