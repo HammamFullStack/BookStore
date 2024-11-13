@@ -22,6 +22,10 @@
     border-radius: 8px; 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*Body Css*/
 body {
     font-family: Arial, sans-serif;
@@ -86,11 +90,20 @@ nav{
     padding: 0 2vw;
 }
 
-.nav-links ul li, .nav-links ul li a{
-    list-style-type: none;
-    text-decoration: none;
-    color: var(--textColor);
-    font-size: 0.9em;
+.footer-linkscontext, .nav-links{
+    ul li{
+        list-style-type: none;
+    }
+
+    li a{
+        text-decoration: none;
+        color: var(--textColor);
+    }
+    font-size: 0.95em;
+
+    a:hover{
+        color: var(--maincolor);
+    }
 }
 
 .nav-logo{
@@ -247,6 +260,10 @@ nav{
 .rates{
     font-size: 0.8em;
     margin-bottom: 0.5em;
+    :hover{
+        color: yellow;
+        scale: 1.5;
+    }
 }
 
 .Arrivals-card:hover .book-cover{
@@ -359,6 +376,12 @@ nav{
 .OurBlog-icons{
     justify-content: space-between;
     margin-bottom: 1.5em;
+    .fa-calendar-days:hover{
+        color: orange;
+    }
+    .fa-heart:hover{
+        color: red;
+    }
 }
 
 /*Footer Css*/
@@ -397,7 +420,6 @@ footer{
  
 .footer-linkscontext li{
     grid-area: footer-linkscontext;
-    list-style-type: none;
     padding: 0.35em;
 }
   
@@ -410,6 +432,21 @@ footer{
 
 .footer-contactcontext ul, .footer-linkscontext ul{
     padding: 0;
+}
+
+.footer-icons{
+    .fa-facebook-f:hover{
+        color: #3b5998;
+    }
+    .fa-instagram:hover{
+        color: #e4405f;
+    }
+    .fa-twitter:hover{
+        color: #1DA1F2;
+    }
+    .fa-linkedin-in:hover{
+        color: #0e76a8;
+    }
 }
   
 .footer-icons i{
@@ -523,7 +560,7 @@ footer{
 
 @media (max-width: 426px) {
 
-    /*Navber media*/
+    /*Navbar media*/
     .nav-container {
         justify-content: space-between;
         padding: 0 1.5em;
@@ -535,6 +572,27 @@ footer{
 
     .nav-links, .digital-image, .aboutus-img{
         display: none;
+    }
+
+    .nav-links ul{
+        position: absolute;
+        top: 2.8vh;
+        left: 0;
+        right: 0;
+        background-color: var(--maincolor);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        z-index: 1;
+
+        li{
+            padding: 0.5em;
+        }
+
+        a{
+            color: white;
+        }
     }
 
     .nav-collapse, .digital-title{
